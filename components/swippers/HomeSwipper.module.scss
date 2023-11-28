@@ -1,0 +1,17 @@
+.swiper_container {
+    display: flex;
+    border: 10px solid cyan !important;
+
+
+    .swiper {
+
+        width: 100%; // Defina a largura desejada em porcentagem
+        margin: auto; // Centralizar o swiper na tela
+        border: 2px solid #FD58FF;
+    }
+
+    .swiper_slide img {
+        width: 100%; // Garantir que a imagem ocupe toda a largura do swiper
+        object-fit: cover;
+    }
+}

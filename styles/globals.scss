@@ -1,0 +1,42 @@
+// globals.scss
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+
+    /* Adiciona uma barra de rolagem personalizada para WebKit */
+    &::-webkit-scrollbar {
+        width: 3px;
+        /* Largura da barra de rolagem */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #fc58ff;
+        /* Cor da barra de rolagem */
+        border-radius: 4px;
+        /* Raio da borda da barra de rolagem */
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #11031F;
+        /* Cor de fundo da barra de rolagem */
+    }
+}
+
+.swiper {
+    border: 1px solid white;
+    box-shadow: 0 0 5px #FFFFFF;
+
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    color: white;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    background: #FFFFFF;
+}

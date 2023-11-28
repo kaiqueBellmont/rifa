@@ -1,0 +1,102 @@
+.page {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh !important;
+    background: #11031F; // Cor de fundo escura
+    background-size: cover;
+    padding-top: 20px; // Ajuste conforme necessário para garantir que o conteúdo não seja sobreposto pelo header
+
+    .content {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        .swipper__wrapper {
+            display: block;
+            padding-top: 80px;
+            max-width: 50%;
+
+
+            .banner {
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #01080eaf !important;
+                font-family: "Chakra Petch", sans-serif;
+                color: white;
+                font-size: 20px;
+                padding: 4px;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-bottom: 5px;
+                margin-top: 5px;
+                border-left: 5px solid #FD58FF;
+
+                .comprador,
+                .termina {
+                    display: flex;
+                    align-items: center;
+                }
+
+                span {
+                    padding-left: 10px;
+                    color: gold;
+                }
+            }
+
+            img {
+                object-fit: fill;
+                width: 100%;
+            }
+        }
+
+        .left__cards {
+            h2 {
+                color: white;
+                padding-right: 100px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+
+            .swipper__wrapper {
+                max-width: 98%;
+
+                .banner {
+                    display: block;
+                }
+            }
+
+            .left__cards {
+                h2 {
+                    padding-right: 0; // ou ajuste conforme necessário para telas móveis
+                }
+            }
+        }
+
+        .content {
+            // Adicionei a classe .colum
+            flex-direction: column;
+
+            .swipper__wrapper {
+                max-width: 100%;
+            }
+
+            .left__cards {
+                h2 {
+                    padding-right: 0; // ou ajuste conforme necessário para telas móveis
+                }
+            }
+        }
+    }
+}

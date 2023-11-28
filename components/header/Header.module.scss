@@ -1,0 +1,100 @@
+// header.module.scss
+.header {
+    position: fixed;
+    z-index: 99;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    background: rgba(127, 24, 122, 0.47);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+
+    .menu {
+        background-color: transparent;
+
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+
+    .button {
+        display: flex;
+        align-items: center;
+        background-color: #FD58FF;
+        gap: 5px;
+        font-size: 20px;
+        box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, .75);
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 25px), calc(100% - 25px) 100%, 0 100%);
+        max-width: 200%;
+        padding: 10px;
+        padding-right: 34px !important;
+        font-family: "Chakra Petch", sans-serif;
+        transition: box-shadow 0.3s ease; // Add a transition for smooth effect
+
+        &:hover {
+            cursor: pointer;
+            border-left: 5px solid cyan;
+            color: cyan;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); // Add a slight box-shadow for the pressed effect
+
+            svg {
+                fill: cyan;
+            }
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+            padding-right: 5px;
+        }
+
+
+    }
+
+    .content {
+        padding: 1.5rem;
+        display: flex;
+
+
+        justify-content: space-between;
+        border-radius: inherit;
+
+        align-items: center;
+        background: radial-gradient(ellipse at center,
+                rgba(0, 0, 0, 0.5) 0%, // Mais claro no centro
+                rgba(0, 0, 0, 1) 100% // Mais escuro nas bordas
+            );
+
+        .logo {
+            img {
+                padding-left: 1.5rem;
+                width: 140px;
+            }
+
+        }
+
+        .nav {
+            display: flex;
+            padding-right: 4.5rem;
+            gap: 1.5rem;
+
+            a {
+                color: #ffffff; // Cor do texto do link
+                text-decoration: none;
+                font-weight: 600;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .mobileToggle {
+        display: flex;
+    }
+}
